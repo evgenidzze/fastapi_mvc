@@ -38,7 +38,6 @@ Create a `.env` file in the project root with the following variables:
 DB_USER=your_db_user
 MYSQL_ROOT_PASSWORD=your_db_password
 DB_HOST=localhost
-DB_NAME=social_media_db
 SECRET_KEY=your_secret_key_for_jwt
 ```
 
@@ -55,23 +54,32 @@ SECRET_KEY=your_secret_key_for_jwt
    https://github.com/evgenidzze/fastapi_mvc
    ```
 
-2. Create a virtual environment:
+2. ```cd fastapi_mvc```
+
+3. Create a virtual environment:
    ```bash
    python -m venv venv
    source venv/bin/activate
    ```
+4. If your database has not been created yet, log into your mysql and create it:
 
-3. Install dependencies:
+   ```bash
+   mysql -u root -p -h 127.0.0.1
+   mysql>CREATE DATABASE social_media_db;
+   exit
+   ```
+
+5. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Run the application:
+6. Run the application:
    ```bash
    uvicorn app.main:app --reload
    ```
 
-5. Access the API documentation at `http://localhost:8000/docs`
+7. Access the API documentation at `http://localhost:8000/docs`
 
 ### Method 2: Running with Docker Compose
 
@@ -81,8 +89,9 @@ Run with Docker Compose:
    ```
    https://github.com/evgenidzze/fastapi_mvc
    ```
+2. ```cd fastapi_mvc```
 
-2. Run docker compose
+3. Run docker compose
    ```bash
    docker compose up -d --build
    ```
