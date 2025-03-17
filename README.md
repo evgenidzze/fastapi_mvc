@@ -17,11 +17,11 @@ app/
 
 ## API Endpoints
 
+### Authentication Endpoints
 - `POST /api/v1/auth/signup`: Register a new user
 - `POST /api/v1/auth/login`: Authenticate a user and receive a token
 
 ### Post Endpoints
-
 - `POST /api/v1/posts`: Create a new post
 - `GET /api/v1/posts`: Get all posts for the authenticated user
 - `DELETE /api/v1/posts/{post_id}`: Delete a post
