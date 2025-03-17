@@ -45,32 +45,44 @@ SECRET_KEY=your_secret_key_for_jwt
 ### Method 1: Running Locally
 
 #### Prerequisites:
+
 - Python 3.12+
 - MySQL database
 - [Optional] Docker and Docker Compose
 
-1. Create a virtual environment:
+1. Clone repository:
+   ```
+   https://github.com/evgenidzze/fastapi_mvc
+   ```
+
+2. Create a virtual environment:
    ```bash
    python -m venv venv
    source venv/bin/activate
    ```
 
-2. Install dependencies:
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the application:
+4. Run the application:
    ```bash
    uvicorn app.main:app --reload
    ```
 
-4. Access the API documentation at `http://localhost:8000/docs`
+5. Access the API documentation at `http://localhost:8000/docs`
 
 ### Method 2: Running with Docker Compose
 
 Run with Docker Compose:
 
-```bash
-docker compose up -d --build
-```
+1. Clone repository:
+   ```
+   https://github.com/evgenidzze/fastapi_mvc
+   ```
+
+2. Run docker compose
+   ```bash
+   docker compose up -d --build
+   ```
